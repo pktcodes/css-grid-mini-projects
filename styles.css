@@ -53,6 +53,7 @@ p {
   font-size: 0.7rem;
   line-height: 2;
 }
+/* button */
 .btn {
   text-transform: capitalize;
   color: var(--primaryColor);
@@ -65,4 +66,38 @@ p {
 .btn:hover {
   background: var(--primaryColor);
   color: var(--mainWhite);
+}
+/* 
+===============
+Main Navbar
+===============
+*/
+.main-navbar {
+  background: var(--darkGrey);
+  padding: 0 2rem;
+}
+.main-navbar li {
+  list-style: none;
+}
+.main-navbar a {
+  padding: 1rem 0;
+  display: block;
+  text-transform: capitalize;
+  color: var(--primaryColor);
+  transition: var(--mainTransition);
+  letter-spacing: var(--mainSpacing);
+}
+.main-navbar a:hover {
+  color: var(--mainblack);
+}
+@media screen and (min-width: 992px) {
+  .main-navbar ul {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .main-navbar a {
+    text-align: center;
+  }
 }
