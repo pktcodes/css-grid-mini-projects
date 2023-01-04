@@ -167,7 +167,7 @@ Cards
 .card-footer span {
   color: var(--primaryColor);
 }
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .cards-center {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -178,4 +178,24 @@ Cards
   .cards-center {
     grid-template-columns: repeat(3, 1fr);
   }
+} */
+
+/* Without Media Queries */
+/* Max width = 1170px, 1 Column Gap - 2rem = 2*16=32px */
+/* How many columns - 3, gaps - 2 */
+/* Space for gaps = 2(gaps)*32= 64 */
+/* Space avaiable = 1170 - 64 = 1106*/
+/* Each column minimum width = 1160/3 = 386.666*, if minimum width can't be provided then the column goes to next row*/
+.cards-center {
+  display: grid;
+  column-gap: 2rem;
+  /* Three Column Layout -autofit */
+  /* grid-template-columns: repeat(auto-fit, minmax(368px, 1fr)); */
+
+  /* Three Column Layout - autofill*/
+  /* grid-template-columns: repeat(auto-fill, minmax(368px, 1fr)); */
+
+  /* Four Column Layout -autofill */
+  /* (1170-96)/4 = 268.5*/
+  grid-template-columns: repeat(auto-fill, minmax(268.5px, 1fr));
 }
